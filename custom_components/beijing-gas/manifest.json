@@ -3,10 +3,10 @@
   "name": "北京燃气信息查询",
   "version": "0.0.1",
   "config_flow": true,
-  "documentation": "https://github.com/zhaoyibo/beijing-gas",
-  "issue_tracker": "https://github.com/zhaoyibo/beijing-gas/issues",
+  "documentation": "https://github.com/forever-utf8/ha-beijing-gas",
+  "issue_tracker": "https://github.com/forever-utf8/ha-beijing-gas/issues",
   "iot_class": "cloud_polling",
   "requirements": [],
   "dependencies": [],
-  "codeowners": ["@zhaoyibo"]
+  "codeowners": ["@forever-utf8"]
 }

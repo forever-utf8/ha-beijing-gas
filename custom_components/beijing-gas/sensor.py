@@ -69,7 +69,6 @@ SENSOR_DESCRIPTIONS: tuple[BJGasSensorEntityDescription, ...] = (
         name="当前阶梯剩余额度",
         device_class=SensorDeviceClass.GAS,
         native_unit_of_measurement=UnitOfVolume.CUBIC_METERS,
-        state_class=SensorStateClass.MEASUREMENT,
         value_key="current_level_remain",
     ),
     BJGasSensorEntityDescription(
@@ -77,7 +76,7 @@ SENSOR_DESCRIPTIONS: tuple[BJGasSensorEntityDescription, ...] = (
         name="本年度用气量",
         device_class=SensorDeviceClass.GAS,
         native_unit_of_measurement=UnitOfVolume.CUBIC_METERS,
-        state_class=SensorStateClass.MEASUREMENT,
+        state_class=SensorStateClass.TOTAL,
         value_key="year_consume",
     ),
     BJGasSensorEntityDescription(
@@ -85,7 +84,7 @@ SENSOR_DESCRIPTIONS: tuple[BJGasSensorEntityDescription, ...] = (
         name="当月用气量",
         device_class=SensorDeviceClass.GAS,
         native_unit_of_measurement=UnitOfVolume.CUBIC_METERS,
-        state_class=SensorStateClass.MEASUREMENT,
+        state_class=SensorStateClass.TOTAL,
         value_key="month_reg_qty",
     ),
     BJGasSensorEntityDescription(
@@ -213,7 +212,6 @@ class BJGasMonthlyHistorySensor(BJGasBaseSensor):
 
     _attr_device_class = SensorDeviceClass.GAS
     _attr_native_unit_of_measurement = UnitOfVolume.CUBIC_METERS
-    _attr_state_class = SensorStateClass.MEASUREMENT
 
     def __init__(self, coordinator: BJGasDataUpdateCoordinator, user_code: str, index: int) -> None:
         super().__init__(coordinator, user_code)
@@ -243,7 +241,6 @@ class BJGasDailyHistorySensor(BJGasBaseSensor):
 
     _attr_device_class = SensorDeviceClass.GAS
     _attr_native_unit_of_measurement = UnitOfVolume.CUBIC_METERS
-    _attr_state_class = SensorStateClass.MEASUREMENT
 
     def __init__(self, coordinator: BJGasDataUpdateCoordinator, user_code: str, index: int) -> None:
         super().__init__(coordinator, user_code)

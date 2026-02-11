@@ -1,0 +1,25 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "北京燃气",
+        "description": "请输入北京燃气账号信息",
+        "data": {
+          "token": "Token",
+          "user_code": "户号"
+        }
+      }
+    },
+    "error": {
+      "auth_failed": "鉴权失败，请检查 token",
+      "invalid_data": "返回数据异常，请检查户号",
+      "cannot_connect": "无法连接北京燃气接口"
+    },
+    "abort": {
+      "already_configured": "该户号已配置",
+      "auth_failed": "鉴权失败，请检查 token",
+      "invalid_data": "配置数据不完整",
+      "cannot_connect": "无法连接北京燃气接口"
+    }
+  }
+}

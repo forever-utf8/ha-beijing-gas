@@ -110,10 +110,15 @@ class BJGasBaseSensor(CoordinatorEntity[BJGasDataUpdateCoordinator], SensorEntit
     """Base entity for bj_gas sensors."""
 
     _attr_has_entity_name = True
+    _object_id: str
 
     def __init__(self, coordinator: BJGasDataUpdateCoordinator, user_code: str) -> None:
         super().__init__(coordinator)
         self._user_code = user_code
+
+    @property
+    def suggested_object_id(self) -> str | None:
+        return self._object_id
 
     @property
     def device_info(self) -> DeviceInfo:
@@ -143,6 +148,7 @@ class BJGasSensor(BJGasBaseSensor):
         super().__init__(coordinator, user_code)
         self.entity_description = description
         self._attr_unique_id = f"{DOMAIN}_{user_code}_{description.key}"
+        self._object_id = f"beijing_gas_{user_code}_{description.key}"
 
     @property
     def native_value(self):
@@ -166,6 +172,7 @@ class BJGasMonthlyHistorySensor(BJGasBaseSensor):
         self._index = index
         self._attr_unique_id = f"{DOMAIN}_{user_code}_monthly_{index}"
         self._attr_translation_key = f"monthly_{index}"
+        self._object_id = f"beijing_gas_{user_code}_monthly_{index}"
 
     @property
     def _monthly_bill(self) -> dict:
@@ -194,6 +201,7 @@ class BJGasDailyHistorySensor(BJGasBaseSensor):
         self._index = index
         self._attr_unique_id = f"{DOMAIN}_{user_code}_daily_{index}"
         self._attr_translation_key = f"daily_{index}"
+        self._object_id = f"beijing_gas_{user_code}_daily_{index}"
 
     @property
     def _daily_bill(self) -> dict:

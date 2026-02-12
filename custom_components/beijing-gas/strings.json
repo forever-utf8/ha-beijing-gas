@@ -21,5 +21,36 @@
       "invalid_data": "配置数据不完整",
       "cannot_connect": "无法连接北京燃气接口"
     }
+  },
+  "entity": {
+    "sensor": {
+      "balance": { "name": "燃气费余额" },
+      "current_level": { "name": "当前燃气阶梯" },
+      "current_price": { "name": "当前气价" },
+      "current_level_remain": { "name": "当前阶梯剩余额度" },
+      "year_consume": { "name": "本年度用气量" },
+      "month_reg_qty": { "name": "当月用气量" },
+      "battery_voltage": { "name": "气表电量" },
+      "mtr_status": { "name": "阀门状态" },
+      "monthly_1": { "name": "月度用气 1" },
+      "monthly_2": { "name": "月度用气 2" },
+      "monthly_3": { "name": "月度用气 3" },
+      "monthly_4": { "name": "月度用气 4" },
+      "monthly_5": { "name": "月度用气 5" },
+      "monthly_6": { "name": "月度用气 6" },
+      "monthly_7": { "name": "月度用气 7" },
+      "monthly_8": { "name": "月度用气 8" },
+      "monthly_9": { "name": "月度用气 9" },
+      "monthly_10": { "name": "月度用气 10" },
+      "monthly_11": { "name": "月度用气 11" },
+      "monthly_12": { "name": "月度用气 12" },
+      "daily_1": { "name": "每日用气 1" },
+      "daily_2": { "name": "每日用气 2" },
+      "daily_3": { "name": "每日用气 3" },
+      "daily_4": { "name": "每日用气 4" },
+      "daily_5": { "name": "每日用气 5" },
+      "daily_6": { "name": "每日用气 6" },
+      "daily_7": { "name": "每日用气 7" }
+    }
   }
 }

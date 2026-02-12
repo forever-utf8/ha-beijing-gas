@@ -17,8 +17,8 @@ def _data_schema(defaults: UserInput | None = None) -> vol.Schema:
     defaults = defaults or {}
     return vol.Schema(
         {
-            vol.Required(CONF_TOKEN, default=defaults.get(CONF_TOKEN, "")): str,
             vol.Required(CONF_USER_CODE, default=defaults.get(CONF_USER_CODE, "")): str,
+            vol.Required(CONF_TOKEN, default=defaults.get(CONF_TOKEN, "")): str,
         }
     )
 
